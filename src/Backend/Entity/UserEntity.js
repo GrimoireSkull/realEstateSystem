@@ -46,7 +46,7 @@ class UserEntity {
         userName: userName,
         profilePicture: profilePic,
         userType: userType,
-        phone: phone,
+        phone: phone || null,
         isSuspended: false,
       });
 
@@ -80,6 +80,7 @@ class UserEntity {
               username: userData.userName,
               profilePic: userData.profilePicture,
               userType: userData.userType,
+              isSuspended: userData.isSuspended,
             };
           }
         } catch (error) {
